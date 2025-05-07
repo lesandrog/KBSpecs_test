@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
             kryptonPropertyGrid1 = new Krypton.Toolkit.KryptonPropertyGrid();
             kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
-
+            kryptonDomainUpDown1 = new Krypton.Toolkit.KryptonDomainUpDown();
+            buttonSpecAny1 = new Krypton.Toolkit.ButtonSpecAny();
             ((System.ComponentModel.ISupportInitialize)kryptonDataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // kryptonTextBox1
-            // 
-
-            kryptonTextBox1.Location = new Point(12, 12);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(154, 23);
-            kryptonTextBox1.TabIndex = 0;
-            kryptonTextBox1.Text = "kryptonTextBox1";
-            // 
-
             // 
             // kryptonButton1
             // 
@@ -94,11 +82,11 @@
             // kryptonPropertyGrid1
             // 
             kryptonPropertyGrid1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            kryptonPropertyGrid1.Location = new Point(798, 63);
+            kryptonPropertyGrid1.Location = new Point(802, 63);
             kryptonPropertyGrid1.Name = "kryptonPropertyGrid1";
             kryptonPropertyGrid1.Padding = new Padding(1);
-
-            kryptonPropertyGrid1.Size = new Size(378, 410);
+            kryptonPropertyGrid1.SelectedObject = buttonSpecAny1;
+            kryptonPropertyGrid1.Size = new Size(378, 398);
             kryptonPropertyGrid1.TabIndex = 5;
             kryptonPropertyGrid1.Text = "kryptonPropertyGrid1";
             // 
@@ -110,35 +98,42 @@
             kryptonDataGridView1.Location = new Point(12, 94);
             kryptonDataGridView1.Name = "kryptonDataGridView1";
             kryptonDataGridView1.RowTemplate.Height = 60;
-            kryptonDataGridView1.Size = new Size(780, 379);
+            kryptonDataGridView1.Size = new Size(784, 367);
             kryptonDataGridView1.TabIndex = 6;
-            // 
             // 
-            
-            
+            // kryptonDomainUpDown1
+            // 
+            kryptonDomainUpDown1.ButtonSpecs.Add(buttonSpecAny1);
+            kryptonDomainUpDown1.Location = new Point(12, 12);
+            kryptonDomainUpDown1.Name = "kryptonDomainUpDown1";
+            kryptonDomainUpDown1.Size = new Size(154, 22);
+            kryptonDomainUpDown1.TabIndex = 7;
+            kryptonDomainUpDown1.Text = "kryptonDomainUpDown1";
+            // 
+            // buttonSpecAny1
+            // 
+            buttonSpecAny1.Checked = Krypton.Toolkit.ButtonCheckState.Checked;
+            buttonSpecAny1.UniqueName = "058ee5e0c76546d589ba91646cc76122";
             // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1188, 485);
+            ClientSize = new Size(1192, 473);
+            Controls.Add(kryptonDomainUpDown1);
             Controls.Add(kryptonDataGridView1);
             Controls.Add(kryptonPropertyGrid1);
             Controls.Add(kryptonButton4);
             Controls.Add(kryptonButton3);
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
-            Controls.Add(kryptonTextBox1);
             Name = "Form5";
             Text = "Form5";
             ((System.ComponentModel.ISupportInitialize)kryptonDataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
 
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
@@ -146,6 +141,7 @@
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonPropertyGrid kryptonPropertyGrid1;
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-
+        private Krypton.Toolkit.KryptonDomainUpDown kryptonDomainUpDown1;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny1;
     }
 }

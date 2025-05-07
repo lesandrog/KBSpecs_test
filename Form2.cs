@@ -60,7 +60,6 @@ namespace KBSpecs_test
             dataTable1.Columns.Add("Custom3 - Size (H) of Control", typeof(string));
         }
 
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Style count: {Enum.GetValues(typeof(PaletteButtonStyle)).Length} Type count: {Enum.GetValues(typeof(PaletteButtonSpecStyle)).Length}");

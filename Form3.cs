@@ -8,8 +8,8 @@ namespace KBSpecs_test
     public partial class Form3 : KryptonForm
     {
         public DataSet dataSet = new DataSet();
-        public string s_control = "KTextBox"; 
-        public int s_idControl = 1;
+        public string s_control = "KDateTimePicker"; 
+        public int s_idControl = 2;
         public DataTable dataTable1 = new DataTable("dataTable1");
 
         public Form3()
@@ -59,7 +59,6 @@ namespace KBSpecs_test
             dataTable1.Columns.Add("Custom3 - Image", typeof(Image));
             dataTable1.Columns.Add("Custom3 - Size (H) of Control", typeof(string));
         }
-
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {

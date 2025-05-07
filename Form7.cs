@@ -8,8 +8,8 @@ namespace KBSpecs_test
     public partial class Form7 : KryptonForm
     {
         public DataSet dataSet = new DataSet();
-        public string s_control = "KTextBox"; 
-        public int s_idControl = 1;
+        public string s_control = "KNumericUpDown"; 
+        public int s_idControl = 6;
         public DataTable dataTable1 = new DataTable("dataTable1");
 
         public Form7()
@@ -59,7 +59,6 @@ namespace KBSpecs_test
             dataTable1.Columns.Add("Custom3 - Image", typeof(Image));
             dataTable1.Columns.Add("Custom3 - Size (H) of Control", typeof(string));
         }
-
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
@@ -136,7 +135,7 @@ namespace KBSpecs_test
                     //Application.DoEvents();
                     //MessageBox.Show($"clipboard set, type: {type}, style: {style}");
                     MessageBoxAutoClose.Show("Sucess", 50);
-                    string sizestyle = $"{kryptonTextBox1.Height}";
+                    string sizestyle = $"{kryptonNumericUpDown1.Height}";
                     Bitmap buttonImage = new Bitmap(70, 50);
                     Graphics g = Graphics.FromImage(buttonImage);
                     g.CopyFromScreen(new Point(Left + 111, Top + 45), new Point(0, 0), buttonImage.Size);
