@@ -105,7 +105,7 @@ namespace KBSpecs_test
 
             if (dataTable1.DataSet != null)
             {
-                dataSet.Tables.Remove(dataTable1);
+                dataSet.Tables.Clear();
                 dataTable1.Clear();
             }
 
@@ -131,8 +131,6 @@ namespace KBSpecs_test
                 foreach (PaletteButtonStyle style in Enum.GetValues(typeof(PaletteButtonStyle)))
                 {
                     buttonSpecAny1.Style = style;
-                    //await Task.Delay(300);
-                    //Application.DoEvents();
                     //MessageBox.Show($"clipboard set, type: {type}, style: {style}");
                     MessageBoxAutoClose.Show("Sucess", 50);
                     string sizestyle = $"{kryptonMaskedTextBox1.Height}";

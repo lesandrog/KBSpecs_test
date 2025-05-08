@@ -8,8 +8,8 @@ namespace KBSpecs_test
     public partial class Form13 : KryptonForm
     {
         public DataSet dataSet = new DataSet();
-        public string s_control = "KTextBox"; 
-        public int s_idControl = 1;
+        public string s_control = "KForm"; 
+        public int s_idControl = 12;
         public DataTable dataTable1 = new DataTable("dataTable1");
 
         public Form13()
@@ -60,7 +60,6 @@ namespace KBSpecs_test
             dataTable1.Columns.Add("Custom3 - Size (H) of Control", typeof(string));
         }
 
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Style count: {Enum.GetValues(typeof(PaletteButtonStyle)).Length} Type count: {Enum.GetValues(typeof(PaletteButtonSpecStyle)).Length}");
@@ -106,10 +105,10 @@ namespace KBSpecs_test
 
             if (dataTable1.DataSet != null)
             {
-                dataSet.Tables.Remove(dataTable1);
+                dataSet.Tables.Clear();
                 dataTable1.Clear();
             }
-
+            Size = new Size(1208,512);
 
             foreach (PaletteButtonSpecStyle type in Enum.GetValues(typeof(PaletteButtonSpecStyle)))
             {
@@ -132,14 +131,12 @@ namespace KBSpecs_test
                 foreach (PaletteButtonStyle style in Enum.GetValues(typeof(PaletteButtonStyle)))
                 {
                     buttonSpecAny1.Style = style;
-                    //await Task.Delay(300);
-                    //Application.DoEvents();
                     //MessageBox.Show($"clipboard set, type: {type}, style: {style}");
                     MessageBoxAutoClose.Show("Sucess", 50);
-                    string sizestyle = $"{kryptonTextBox1.Height}";
-                    Bitmap buttonImage = new Bitmap(70, 50);
+                    string sizestyle = ""; //$"{Height}";
+                    Bitmap buttonImage = new Bitmap(70, 60);
                     Graphics g = Graphics.FromImage(buttonImage);
-                    g.CopyFromScreen(new Point(Left + 111, Top + 45), new Point(0, 0), buttonImage.Size);
+                    g.CopyFromScreen(new Point(Left + 1059, Top -5), new Point(0, 0), buttonImage.Size);
                     Clipboard.SetImage(buttonImage);
 
                     switch (style)
@@ -248,10 +245,12 @@ namespace KBSpecs_test
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            var buttonImage = new Bitmap(167, 50);
+            Size = new Size(300, 512);
+            var buttonImage = new Bitmap(310, 70);
             Graphics g = Graphics.FromImage(buttonImage);
-            g.CopyFromScreen(new Point(Left + 14, Top + 45), new Point(0, 0), buttonImage.Size);
+            g.CopyFromScreen(new Point(Left -5, Top -5), new Point(0, 0), buttonImage.Size);
             Clipboard.SetImage(buttonImage);
+            Size = new Size(1208, 512);
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)

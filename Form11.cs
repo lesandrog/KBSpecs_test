@@ -8,8 +8,8 @@ namespace KBSpecs_test
     public partial class Form11 : KryptonForm
     {
         public DataSet dataSet = new DataSet();
-        public string s_control = "KTextBox"; 
-        public int s_idControl = 1;
+        public string s_control = "KHeaderGroup"; 
+        public int s_idControl = 10;
         public DataTable dataTable1 = new DataTable("dataTable1");
 
         public Form11()
@@ -60,7 +60,6 @@ namespace KBSpecs_test
             dataTable1.Columns.Add("Custom3 - Size (H) of Control", typeof(string));
         }
 
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Style count: {Enum.GetValues(typeof(PaletteButtonStyle)).Length} Type count: {Enum.GetValues(typeof(PaletteButtonSpecStyle)).Length}");
@@ -106,24 +105,24 @@ namespace KBSpecs_test
 
             if (dataTable1.DataSet != null)
             {
-                dataSet.Tables.Remove(dataTable1);
+                dataSet.Tables.Clear();
                 dataTable1.Clear();
             }
 
 
             foreach (PaletteButtonSpecStyle type in Enum.GetValues(typeof(PaletteButtonSpecStyle)))
             {
-                buttonSpecAny1.Type = type;
+                buttonSpecHeaderGroup1.Type = type;
                 if (type == PaletteButtonSpecStyle.Generic)
                 {
-                    buttonSpecAny1.Image = Properties.Resources._1;
+                    buttonSpecHeaderGroup1.Image = Properties.Resources._1;
                 }
                 else
                 {
-                    buttonSpecAny1.Image = null;
+                    buttonSpecHeaderGroup1.Image = null;
                 }
 
-                Image i_image = buttonSpecAny1.GetImage(KryptonManager.CurrentGlobalPalette, PaletteState.Normal) ?? new Bitmap(16, 16);
+                Image i_image = buttonSpecHeaderGroup1.GetImage(KryptonManager.CurrentGlobalPalette, PaletteState.Normal) ?? new Bitmap(16, 16);
                 Clipboard.SetImage(i_image);
                 string size = $"{i_image.Width}x{i_image.Height}";
                 s_idType += 1;
@@ -131,15 +130,13 @@ namespace KBSpecs_test
 
                 foreach (PaletteButtonStyle style in Enum.GetValues(typeof(PaletteButtonStyle)))
                 {
-                    buttonSpecAny1.Style = style;
-                    //await Task.Delay(300);
-                    //Application.DoEvents();
+                    buttonSpecHeaderGroup1.Style = style;
                     //MessageBox.Show($"clipboard set, type: {type}, style: {style}");
                     MessageBoxAutoClose.Show("Sucess", 50);
-                    string sizestyle = $"{kryptonTextBox1.Height}";
-                    Bitmap buttonImage = new Bitmap(70, 50);
+                    string sizestyle = $"{kryptonHeaderGroup1.Height - kryptonPanel1.Height - 22}";
+                    Bitmap buttonImage = new Bitmap(70, 60);
                     Graphics g = Graphics.FromImage(buttonImage);
-                    g.CopyFromScreen(new Point(Left + 111, Top + 45), new Point(0, 0), buttonImage.Size);
+                    g.CopyFromScreen(new Point(Left + 234, Top + 45), new Point(0, 0), buttonImage.Size);
                     Clipboard.SetImage(buttonImage);
 
                     switch (style)
@@ -248,7 +245,7 @@ namespace KBSpecs_test
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            var buttonImage = new Bitmap(167, 50);
+            var buttonImage = new Bitmap(290, 130);
             Graphics g = Graphics.FromImage(buttonImage);
             g.CopyFromScreen(new Point(Left + 14, Top + 45), new Point(0, 0), buttonImage.Size);
             Clipboard.SetImage(buttonImage);
@@ -256,7 +253,7 @@ namespace KBSpecs_test
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            Image i_image = buttonSpecAny1.GetImage(KryptonManager.CurrentGlobalPalette, PaletteState.Normal) ?? new Bitmap(16, 16);
+            Image i_image = buttonSpecHeaderGroup1.GetImage(KryptonManager.CurrentGlobalPalette, PaletteState.Normal) ?? new Bitmap(16, 16);
             Clipboard.SetImage(i_image);
         }
 

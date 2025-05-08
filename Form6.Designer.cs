@@ -33,9 +33,9 @@
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
             kryptonPropertyGrid1 = new Krypton.Toolkit.KryptonPropertyGrid();
+            buttonSpecAny1 = new Krypton.Toolkit.ButtonSpecAny();
             kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             kryptonMaskedTextBox1 = new Krypton.Toolkit.KryptonMaskedTextBox();
-            buttonSpecAny1 = new Krypton.Toolkit.ButtonSpecAny();
             ((System.ComponentModel.ISupportInitialize)kryptonDataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +61,8 @@
             // 
             // kryptonButton3
             // 
-            kryptonButton3.Location = new Point(794, 12);
+            kryptonButton3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            kryptonButton3.Location = new Point(802, 12);
             kryptonButton3.Name = "kryptonButton3";
             kryptonButton3.Size = new Size(186, 45);
             kryptonButton3.TabIndex = 3;
@@ -71,7 +72,8 @@
             // 
             // kryptonButton4
             // 
-            kryptonButton4.Location = new Point(986, 12);
+            kryptonButton4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            kryptonButton4.Location = new Point(994, 12);
             kryptonButton4.Name = "kryptonButton4";
             kryptonButton4.Size = new Size(186, 45);
             kryptonButton4.TabIndex = 4;
@@ -82,13 +84,18 @@
             // kryptonPropertyGrid1
             // 
             kryptonPropertyGrid1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            kryptonPropertyGrid1.Location = new Point(800, 63);
+            kryptonPropertyGrid1.Location = new Point(802, 63);
             kryptonPropertyGrid1.Name = "kryptonPropertyGrid1";
             kryptonPropertyGrid1.Padding = new Padding(1);
             kryptonPropertyGrid1.SelectedObject = buttonSpecAny1;
-            kryptonPropertyGrid1.Size = new Size(378, 404);
+            kryptonPropertyGrid1.Size = new Size(378, 398);
             kryptonPropertyGrid1.TabIndex = 5;
             kryptonPropertyGrid1.Text = "kryptonPropertyGrid1";
+            // 
+            // buttonSpecAny1
+            // 
+            buttonSpecAny1.Checked = Krypton.Toolkit.ButtonCheckState.Checked;
+            buttonSpecAny1.UniqueName = "8581dc4c290b479d8b4feccef1e158aa";
             // 
             // kryptonDataGridView1
             // 
@@ -98,7 +105,7 @@
             kryptonDataGridView1.Location = new Point(12, 94);
             kryptonDataGridView1.Name = "kryptonDataGridView1";
             kryptonDataGridView1.RowTemplate.Height = 60;
-            kryptonDataGridView1.Size = new Size(782, 373);
+            kryptonDataGridView1.Size = new Size(784, 367);
             kryptonDataGridView1.TabIndex = 6;
             // 
             // kryptonMaskedTextBox1
@@ -110,16 +117,11 @@
             kryptonMaskedTextBox1.TabIndex = 7;
             kryptonMaskedTextBox1.Text = "kryptonMaskedTextBox1";
             // 
-            // buttonSpecAny1
-            // 
-            buttonSpecAny1.Checked = Krypton.Toolkit.ButtonCheckState.Checked;
-            buttonSpecAny1.UniqueName = "8581dc4c290b479d8b4feccef1e158aa";
-            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1190, 479);
+            ClientSize = new Size(1192, 473);
             Controls.Add(kryptonMaskedTextBox1);
             Controls.Add(kryptonDataGridView1);
             Controls.Add(kryptonPropertyGrid1);

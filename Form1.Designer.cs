@@ -47,6 +47,8 @@
             kryptonButton16 = new Krypton.Toolkit.KryptonButton();
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             kryptonManager1 = new Krypton.Toolkit.KryptonManager(components);
+            kryptonThemeComboBox1 = new Krypton.Toolkit.KryptonThemeComboBox();
+            ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).BeginInit();
             SuspendLayout();
             // 
             // kryptonButton1
@@ -166,7 +168,7 @@
             kryptonButton12.Size = new Size(206, 25);
             kryptonButton12.TabIndex = 13;
             kryptonButton12.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton12.Values.Text = "12 /13 Ribbon";
+            kryptonButton12.Values.Text = "12 Form";
             kryptonButton12.Click += kryptonButton12_Click;
             // 
             // kryptonButton13
@@ -176,7 +178,7 @@
             kryptonButton13.Size = new Size(206, 25);
             kryptonButton13.TabIndex = 14;
             kryptonButton13.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton13.Values.Text = "14 Form";
+            kryptonButton13.Values.Text = "13 / 14 Ribbon";
             kryptonButton13.Click += kryptonButton13_Click;
             // 
             // kryptonButton14
@@ -217,11 +219,22 @@
             // 
             kryptonManager1.GlobalPaletteMode = Krypton.Toolkit.PaletteMode.Office2010Silver;
             // 
+            // kryptonThemeComboBox1
+            // 
+            kryptonThemeComboBox1.DefaultPalette = Krypton.Toolkit.PaletteMode.Office2010Silver;
+            kryptonThemeComboBox1.DropDownWidth = 226;
+            kryptonThemeComboBox1.Location = new Point(590, 332);
+            kryptonThemeComboBox1.Name = "kryptonThemeComboBox1";
+            kryptonThemeComboBox1.Size = new Size(226, 22);
+            kryptonThemeComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            kryptonThemeComboBox1.TabIndex = 18;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(820, 390);
+            ClientSize = new Size(828, 366);
+            Controls.Add(kryptonThemeComboBox1);
             Controls.Add(kryptonButton16);
             Controls.Add(kryptonButton15);
             Controls.Add(kryptonButton14);
@@ -240,6 +253,7 @@
             Controls.Add(kryptonButton1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -263,5 +277,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton16;
         private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
         private Krypton.Toolkit.KryptonManager kryptonManager1;
+        private Krypton.Toolkit.KryptonThemeComboBox kryptonThemeComboBox1;
     }
 }

@@ -105,7 +105,7 @@ namespace KBSpecs_test
 
             if (dataTable1.DataSet != null)
             {
-                dataSet.Tables.Remove(dataTable1);
+                dataSet.Tables.Clear();
                 dataTable1.Clear();
             }
 
@@ -131,8 +131,7 @@ namespace KBSpecs_test
                 foreach (PaletteButtonStyle style in Enum.GetValues(typeof(PaletteButtonStyle)))
                 {
                     buttonSpecAny1.Style = style;
-                    //await Task.Delay(300);
-                    //Application.DoEvents();
+                    kryptonComboBox1.MaximumSize = new Size(154, 61);
                     //MessageBox.Show($"clipboard set, type: {type}, style: {style}");
                     MessageBoxAutoClose.Show("Sucess", 50);
                     string sizestyle = $"{kryptonComboBox1.Height}";
@@ -140,6 +139,7 @@ namespace KBSpecs_test
                     Graphics g = Graphics.FromImage(buttonImage);
                     g.CopyFromScreen(new Point(Left + 111, Top + 45), new Point(0, 0), buttonImage.Size);
                     Clipboard.SetImage(buttonImage);
+                    kryptonComboBox1.MaximumSize = new Size(154, 60);
 
                     switch (style)
                     {
