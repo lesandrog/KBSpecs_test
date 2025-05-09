@@ -4,15 +4,20 @@ namespace KBSpecs_test
 {
     public partial class Form1 : KryptonForm
     {
+
         public Form1()
         {
             InitializeComponent();
+            kryptonTextBox1.Text = $"{Program.dpiScal}";
         }
+
+
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             Form2 newForm = new Form2();
             newForm.Show();
+
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)

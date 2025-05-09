@@ -1,19 +1,28 @@
 using OfficeOpenXml;
 using System.Data;
 using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 
 namespace KBSpecs_test
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+        public static double dpiScal;
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
+
+        [DllImport("user32.dll")]
+        private static extern uint GetDpiForWindow(IntPtr hwnd);
+
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            IntPtr hWnd = GetForegroundWindow();
+            uint dpi = GetDpiForWindow(hWnd);
+            dpiScal = (int)dpi;
+            dpiScal = dpiScal / 96;
+
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
@@ -66,7 +75,6 @@ namespace KBSpecs_test
                 excel.SaveAs(new FileInfo(filePath));
             }
         }
-
        
     }
 

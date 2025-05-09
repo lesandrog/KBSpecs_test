@@ -48,6 +48,7 @@
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             kryptonManager1 = new Krypton.Toolkit.KryptonManager(components);
             kryptonThemeComboBox1 = new Krypton.Toolkit.KryptonThemeComboBox();
+            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).BeginInit();
             SuspendLayout();
             // 
@@ -223,17 +224,25 @@
             // 
             kryptonThemeComboBox1.DefaultPalette = Krypton.Toolkit.PaletteMode.Office2010Silver;
             kryptonThemeComboBox1.DropDownWidth = 226;
-            kryptonThemeComboBox1.Location = new Point(590, 332);
+            kryptonThemeComboBox1.Location = new Point(597, 293);
             kryptonThemeComboBox1.Name = "kryptonThemeComboBox1";
             kryptonThemeComboBox1.Size = new Size(226, 22);
             kryptonThemeComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             kryptonThemeComboBox1.TabIndex = 18;
             // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(746, 12);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(74, 23);
+            kryptonTextBox1.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 366);
+            ClientSize = new Size(835, 337);
+            Controls.Add(kryptonTextBox1);
             Controls.Add(kryptonThemeComboBox1);
             Controls.Add(kryptonButton16);
             Controls.Add(kryptonButton15);
@@ -255,6 +264,7 @@
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -278,5 +288,6 @@
         private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
         private Krypton.Toolkit.KryptonManager kryptonManager1;
         private Krypton.Toolkit.KryptonThemeComboBox kryptonThemeComboBox1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }

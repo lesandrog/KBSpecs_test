@@ -245,6 +245,14 @@ namespace KBSpecs_test
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            //double sW = 167 * Program.dpiScal;
+            //double sH = 50 * Program.dpiScal;
+            //double sL = (Left + 14) * Program.dpiScal;
+            //double sT = (Top + 45) * Program.dpiScal;
+            //var buttonImage = new Bitmap((int)sW, (int)sH);
+            //Graphics g = Graphics.FromImage(buttonImage);
+            //g.CopyFromScreen(new Point((int)sL,(int)sT), new Point(0, 0), buttonImage.Size);
+
             var buttonImage = new Bitmap(167, 50);
             Graphics g = Graphics.FromImage(buttonImage);
             g.CopyFromScreen(new Point(Left + 14, Top + 45), new Point(0, 0), buttonImage.Size);
