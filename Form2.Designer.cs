@@ -1,4 +1,5 @@
-﻿namespace KBSpecs_test
+﻿using Krypton.Toolkit;
+namespace KBSpecs_test
 {
     partial class Form2
     {
@@ -28,14 +29,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            buttonSpecAny1 = new Krypton.Toolkit.ButtonSpecAny();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton4 = new Krypton.Toolkit.KryptonButton();
-            kryptonPropertyGrid1 = new Krypton.Toolkit.KryptonPropertyGrid();
-            kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
+            kryptonTextBox1 = new KryptonTextBox();
+            buttonSpecAny1 = new ButtonSpecAny();
+            kryptonButton1 = new KryptonButton();
+            kryptonButton2 = new KryptonButton();
+            kryptonButton3 = new KryptonButton();
+            kryptonButton4 = new KryptonButton();
+            kryptonPropertyGrid1 = new KryptonPropertyGrid();
+            kryptonDataGridView1 = new KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)kryptonDataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -47,10 +48,11 @@
             kryptonTextBox1.Size = new Size(154, 23);
             kryptonTextBox1.TabIndex = 0;
             kryptonTextBox1.Text = "kryptonTextBox1";
+            kryptonTextBox1.SizeChanged += kryptonTextBox1_SizeChanged;
             // 
             // buttonSpecAny1
             // 
-            buttonSpecAny1.Checked = Krypton.Toolkit.ButtonCheckState.Checked;
+            buttonSpecAny1.Checked = ButtonCheckState.Checked;
             buttonSpecAny1.UniqueName = "095a6af88d9d4614b5779ab683e102f2";
             // 
             // kryptonButton1
@@ -76,7 +78,7 @@
             // kryptonButton3
             // 
             kryptonButton3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            kryptonButton3.Location = new Point(806, 12);
+            kryptonButton3.Location = new Point(816, 12);
             kryptonButton3.Name = "kryptonButton3";
             kryptonButton3.Size = new Size(186, 45);
             kryptonButton3.TabIndex = 3;
@@ -87,7 +89,7 @@
             // kryptonButton4
             // 
             kryptonButton4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            kryptonButton4.Location = new Point(998, 12);
+            kryptonButton4.Location = new Point(1008, 12);
             kryptonButton4.Name = "kryptonButton4";
             kryptonButton4.Size = new Size(186, 45);
             kryptonButton4.TabIndex = 4;
@@ -98,11 +100,11 @@
             // kryptonPropertyGrid1
             // 
             kryptonPropertyGrid1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            kryptonPropertyGrid1.Location = new Point(806, 63);
+            kryptonPropertyGrid1.Location = new Point(816, 63);
             kryptonPropertyGrid1.Name = "kryptonPropertyGrid1";
             kryptonPropertyGrid1.Padding = new Padding(1);
             kryptonPropertyGrid1.SelectedObject = buttonSpecAny1;
-            kryptonPropertyGrid1.Size = new Size(378, 386);
+            kryptonPropertyGrid1.Size = new Size(378, 356);
             kryptonPropertyGrid1.TabIndex = 5;
             kryptonPropertyGrid1.Text = "kryptonPropertyGrid1";
             // 
@@ -114,14 +116,14 @@
             kryptonDataGridView1.Location = new Point(12, 94);
             kryptonDataGridView1.Name = "kryptonDataGridView1";
             kryptonDataGridView1.RowTemplate.Height = 60;
-            kryptonDataGridView1.Size = new Size(788, 355);
+            kryptonDataGridView1.Size = new Size(798, 325);
             kryptonDataGridView1.TabIndex = 6;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1196, 461);
+            ClientSize = new Size(1206, 431);
             Controls.Add(kryptonDataGridView1);
             Controls.Add(kryptonPropertyGrid1);
             Controls.Add(kryptonButton4);
@@ -130,7 +132,8 @@
             Controls.Add(kryptonButton1);
             Controls.Add(kryptonTextBox1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "KryptonTextBox";
+            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)kryptonDataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
